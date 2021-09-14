@@ -47,7 +47,6 @@ public class PlayerScript : MonoBehaviour
     }
     public void shootArrow()
     {
-        attackSpeed = 1;
         GameObject laser = Instantiate(laserPrefab, GameObject.FindGameObjectWithTag("GameCanvas").transform) as GameObject;
         laser.transform.position = playerPosition;
     }

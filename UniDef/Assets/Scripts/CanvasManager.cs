@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class CanvasManager : MonoBehaviour
 {
     public GameObject MenuCanvas;
@@ -17,6 +16,7 @@ public class CanvasManager : MonoBehaviour
     {
         everythingOff();
         GameCanvas.GetComponent<Canvas>().enabled = true;
+        GameplayManager.instance.startGame();
     }
     private void everythingOff()
     {

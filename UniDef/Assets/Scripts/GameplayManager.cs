@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -11,7 +13,44 @@ public class GameplayManager : MonoBehaviour
         }
     }
 
-    public bool isStarted = false;
+    public GameObject enemyPrefab0;
 
+    public int enemyHealth;
+    public int highScore;
+    public int score;
+    public Text scoreText;
+    float timeElapsed;
+    public Text timeElapsedText;
+    public bool isStarted;
+    float spawnRate = 5;
+    float nextSpawn;
 
+    void Update()
+    {
+        if (isStarted)
+        {
+            timeElapsed += Time.deltaTime;
+            timeElapsedText.text = "Time: " + Math.Truncate(timeElapsed);
+
+            nextSpawn -= Time.deltaTime;
+            if (nextSpawn <= 0)
+            {
+                spawnEnemy(1);
+                nextSpawn = spawnRate;
+            }
+        }
+    }
+    public void startGame()
+    {
+        scoreText.text = "Score: " + score;
+        timeElapsed = 0;
+        isStarted = true;
+    }
+    private void spawnEnemy(int howMany)
+    {
+        for (int i = 0; i < howMany; i++)
+        {
+            GameObject enemy = Instantiate(enemyPrefab0, new Vector2((Screen.width - 60) * UnityEngine.Random.value, Screen.height), Quaternion.identity, GameObject.FindGameObjectWithTag("GameCanvas").transform) as GameObject;
+        }
+    }
 }
