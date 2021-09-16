@@ -15,24 +15,26 @@ public class Laser : MonoBehaviour
         rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
         //speed
-        if (rotationZ >= 90)
+        float addxy = System.Math.Abs(difference.x) + System.Math.Abs(difference.y);
+        speedx = (System.Math.Abs(difference.x) / addxy) * speed;
+        if (difference.x < 0)
         {
-            speedx = -((rotationZ / 90) - 1) * speed;
-            speedy = speed - Mathf.Abs(speedx);
+            speedx = -((System.Math.Abs(difference.x) / addxy) * speed);
         }
         else
         {
-            speedx = (1 - (rotationZ / 90)) * speed;
-            speedy = speed - Mathf.Abs(speedx);
+            speedx = (System.Math.Abs(difference.x) / addxy) * speed;
+        }
+        if (difference.y < 0)
+        {
+            speedy = -((System.Math.Abs(difference.y) / addxy) * speed);
+        }
+        else
+        {
+            speedy = (System.Math.Abs(difference.y) / addxy) * speed;
         }
 
         rb.velocity = new Vector2(speedx, speedy);
-        //if wanting to shoot backwards...
-        if (speedy < 0)
-        {
-            PlayerScript.instance.timer = PlayerScript.instance.nextAttack;
-            Destroy(this.gameObject);
-        }
     }
     void Update()
     {

@@ -19,6 +19,17 @@ public class Enemy : MonoBehaviour
         healthBar.maxValue = health;
         healthBar.value = 0;
     }
+    private void Update()
+    {
+        if (!GameplayManager.instance.isStarted)
+        {
+            rb.velocity = new Vector2(0,0);
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, -Screen.height / (15 / enemySpeed));
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Laser")
@@ -31,6 +42,10 @@ public class Enemy : MonoBehaviour
                 GameplayManager.instance.scoreText.text = "Score: " + GameplayManager.instance.score;
                 Destroy(this.gameObject);
             }
+        }
+        else if (other.tag == "Wall")
+        {
+            transform.position = new Vector2(transform.position.x,transform.position.y + this.GetComponent<RectTransform>().rect.height * 2);
         }
     }
 }

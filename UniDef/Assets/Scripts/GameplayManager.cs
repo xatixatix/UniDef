@@ -16,7 +16,6 @@ public class GameplayManager : MonoBehaviour
     public GameObject enemyPrefab0;
 
     public int enemyHealth;
-    public int highScore;
     public int score;
     public Text scoreText;
     float timeElapsed;
@@ -44,6 +43,7 @@ public class GameplayManager : MonoBehaviour
     {
         scoreText.text = "Score: " + score;
         timeElapsed = 0;
+        Wall.instance.wallHealth = DataHolder.instance.wallMaxHealth;
         isStarted = true;
     }
     private void spawnEnemy(int howMany)
@@ -52,5 +52,15 @@ public class GameplayManager : MonoBehaviour
         {
             GameObject enemy = Instantiate(enemyPrefab0, new Vector2((Screen.width - 60) * UnityEngine.Random.value, Screen.height), Quaternion.identity, GameObject.FindGameObjectWithTag("GameCanvas").transform) as GameObject;
         }
+    }
+    public void endOfRun()
+    {
+        isStarted = false;
+        if (DataHolder.instance.highScore < score)
+        {
+            DataHolder.instance.highScore = score;
+        }
+
+        SaveManager.instance.JustSave();
     }
 }

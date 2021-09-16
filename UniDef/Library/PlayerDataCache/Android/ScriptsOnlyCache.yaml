@@ -2,10 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CanvasManager
+    - DataHolder
     - Enemy
     - GameplayManager
     - Laser
     - PlayerScript
+    - SaveManager
+    - Wall
     Unity.Mobile.AndroidLogcat.Editor.dll:
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
@@ -74,9 +77,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3042}
     - Class: 114
+      Script: {instanceID: 4080}
+    - Class: 114
       Script: {instanceID: 4258}
     - Class: 114
       Script: {instanceID: 4380}
+    - Class: 114
+      Script: {instanceID: 15992}
+    - Class: 114
+      Script: {instanceID: 16000}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,7 +209,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 8dd99f150051b7ca4af1003516cd1a31
+      Hash: b0577c40583301c0486303c786c9b733
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameplayManager
@@ -558,7 +567,19 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 6c8c28d7c66c8a88170fa644544492e4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wall
+  - hash:
+      serializedVersion: 2
+      Hash: 1f746bd25ca0c709e0e5248b8e6bc014
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DataHolder
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.03.apk
+  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.04.apk

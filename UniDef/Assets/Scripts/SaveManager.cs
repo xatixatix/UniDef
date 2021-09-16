@@ -55,7 +55,7 @@ public class SaveManager : MonoBehaviour
         FileStream fileStream = File.Open(SavePath, FileMode.Open);
         SaveData saveData = (SaveData)binaryformatter.Deserialize(fileStream);
 
-        GameplayManager.instance.highScore = saveData.highScore;
+        DataHolder.instance.highScore = saveData.highScore;
 
         fileStream.Close();
     }
@@ -67,7 +67,7 @@ public class SaveManager : MonoBehaviour
 
         SaveData newData = new SaveData()
         {
-            highScore = GameplayManager.instance.highScore
+            highScore = DataHolder.instance.highScore
         };
 
         binaryformatter.Serialize(fileStream, newData);
