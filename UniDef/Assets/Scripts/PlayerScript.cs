@@ -16,8 +16,6 @@ public class PlayerScript : MonoBehaviour
 
     //attributes
     public float timer;
-    public float dmg = 10;
-    public float attackSpeed = 1;
     public float nextAttack = 1;
     public Vector3 playerPosition;
     void Start()
@@ -28,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (GameplayManager.instance.isStarted)
         {
-            nextAttack = (1 / attackSpeed) - timer;
+            nextAttack = (1 / DataHolder.instance.attackSpeed) - timer;
             timer += Time.deltaTime;
             if (Input.GetMouseButton(0))
             {
@@ -36,7 +34,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     Vector2 pos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                     shootArrow();
-                    nextAttack = 1 / attackSpeed;
+                    nextAttack = 1 / DataHolder.instance.attackSpeed;
                     timer = 0;
                 }
             }

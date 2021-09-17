@@ -3,6 +3,7 @@ public class CanvasManager : MonoBehaviour
 {
     public GameObject MenuCanvas;
     public GameObject GameCanvas;
+    public GameObject UpgradeCanvas;
     void Start()
     {
         toMenu();
@@ -18,9 +19,15 @@ public class CanvasManager : MonoBehaviour
         GameCanvas.GetComponent<Canvas>().enabled = true;
         GameplayManager.instance.startGame();
     }
+    public void toUpgrades()
+    {
+        everythingOff();
+        UpgradeCanvas.GetComponent<Canvas>().enabled = true;
+    }
     private void everythingOff()
     {
         MenuCanvas.GetComponent<Canvas>().enabled = false;
         GameCanvas.GetComponent<Canvas>().enabled = false;
+        UpgradeCanvas.GetComponent<Canvas>().enabled = true;
     }
 }

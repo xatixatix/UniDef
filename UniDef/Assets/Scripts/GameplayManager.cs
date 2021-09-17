@@ -61,6 +61,13 @@ public class GameplayManager : MonoBehaviour
             DataHolder.instance.highScore = score;
         }
 
+        int coinsToAdd = Convert.ToInt32(score / 3 * ((DataHolder.instance.laserU + DataHolder.instance.speedU +DataHolder.instance.fireRateU) / 3));
+        if (coinsToAdd < 5 && score > 10)
+        {
+            coinsToAdd = 5;
+        }
+        DataHolder.instance.coins += coinsToAdd;
+
         SaveManager.instance.JustSave();
     }
 }

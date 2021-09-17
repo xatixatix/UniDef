@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    private float speed = Screen.height / (3 / 1);
+    private float speed;
     private float speedx;
     private float speedy;
     private float rotationZ;
     private Rigidbody2D rb;
     void Start()
     {
+        speed = (Screen.height / (3 / 1)) * DataHolder.instance.laserSpeed;
         rb = this.GetComponent<Rigidbody2D>();
         //rotation
         Vector3 difference = Input.mousePosition - transform.position;

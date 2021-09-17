@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.tag == "Laser")
         {
-            health -= PlayerScript.instance.dmg;
+            health -= DataHolder.instance.dmg;
             healthBar.value = health;
             if (health <= 0)
             {

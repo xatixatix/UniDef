@@ -8,7 +8,10 @@ ScriptsOnlyBuild:
     - Laser
     - PlayerScript
     - SaveManager
+    - UpgradeManager
     - Wall
+    Unity.CollabProxy.Editor.dll:
+    - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     Unity.Mobile.AndroidLogcat.Editor.dll:
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
@@ -55,37 +58,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1462}
+      Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1648}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 2016}
     - Class: 114
-      Script: {instanceID: 2226}
+      Script: {instanceID: 2224}
     - Class: 114
-      Script: {instanceID: 2304}
+      Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 2370}
+      Script: {instanceID: 2296}
     - Class: 114
-      Script: {instanceID: 2412}
+      Script: {instanceID: 2310}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2418}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2586}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2780}
     - Class: 114
-      Script: {instanceID: 4080}
+      Script: {instanceID: 2862}
     - Class: 114
-      Script: {instanceID: 4258}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 4380}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 15992}
+      Script: {instanceID: 4088}
     - Class: 114
-      Script: {instanceID: 16000}
+      Script: {instanceID: 4266}
+    - Class: 114
+      Script: {instanceID: 4388}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -209,10 +214,22 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 6c8c28d7c66c8a88170fa644544492e4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Wall
+  - hash:
+      serializedVersion: 2
       Hash: b0577c40583301c0486303c786c9b733
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameplayManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5e16140f9bf5feea714cbef410264e8b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpgradeManager
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -221,7 +238,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 997a2b67a3242a377fa1e0d63a451ccf
+      Hash: e1655a046f47d9454382cf3667a87b78
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasManager
@@ -339,6 +356,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: e519ee5b3b518d18da1458fdb19781d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DataHolder
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -551,7 +574,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: aab63b375e2e7592a6878e2a59c0498d
+      Hash: b1ee17970010ce207f9b017e94025e3e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -567,19 +590,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 6c8c28d7c66c8a88170fa644544492e4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Wall
-  - hash:
-      serializedVersion: 2
-      Hash: 1f746bd25ca0c709e0e5248b8e6bc014
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DataHolder
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.04.apk
+  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.05.apk

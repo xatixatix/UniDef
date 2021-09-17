@@ -32,6 +32,7 @@ public class SaveManager : MonoBehaviour
         {
             LoadSave();
         }
+        UpgradeManager.instance.RefreshUpgrades();
     }
 
     private void CreateSave()
@@ -41,7 +42,11 @@ public class SaveManager : MonoBehaviour
 
         SaveData newSaveData = new SaveData
         {
-            highScore = 0
+            highScore = 0,
+            coins = 0,
+            laserU = 1,
+            speedU = 1,
+            fireRateU = 1
         };
 
         binaryformatter.Serialize(fileStream, newSaveData);
@@ -56,6 +61,10 @@ public class SaveManager : MonoBehaviour
         SaveData saveData = (SaveData)binaryformatter.Deserialize(fileStream);
 
         DataHolder.instance.highScore = saveData.highScore;
+        DataHolder.instance.coins = saveData.coins;
+        DataHolder.instance.laserU = saveData.laserU;
+        DataHolder.instance.speedU = saveData.speedU;
+        DataHolder.instance.fireRateU = saveData.fireRateU;
 
         fileStream.Close();
     }
@@ -67,7 +76,11 @@ public class SaveManager : MonoBehaviour
 
         SaveData newData = new SaveData()
         {
-            highScore = DataHolder.instance.highScore
+            highScore = DataHolder.instance.highScore,
+            coins = DataHolder.instance.coins,
+            laserU = DataHolder.instance.laserU,
+            speedU = DataHolder.instance.speedU,
+            fireRateU = DataHolder.instance.fireRateU
         };
 
         binaryformatter.Serialize(fileStream, newData);
@@ -88,5 +101,12 @@ public class SaveData
         }
     }
 
+    #region Upgrades
+    public int laserU;
+    public int speedU;
+    public int fireRateU;
+    #endregion
+
     public int highScore;
+    public int coins;
 }

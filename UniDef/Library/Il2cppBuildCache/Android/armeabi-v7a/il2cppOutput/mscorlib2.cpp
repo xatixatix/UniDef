@@ -25686,6 +25686,14 @@ IL_0018:
 		return L_3;
 	}
 }
+// System.Int32 System.Convert::ToInt32(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Convert_ToInt32_mCA113BB7A4ED0108883DCECAEF16A0F8FB3E5EDF (int32_t ___value0, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___value0;
+		return L_0;
+	}
+}
 // System.Int32 System.Convert::ToInt32(System.Int64)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Convert_ToInt32_m982F21DF492399F7089168CAA31C8E4A125AD404 (int64_t ___value0, const RuntimeMethod* method)
 {
