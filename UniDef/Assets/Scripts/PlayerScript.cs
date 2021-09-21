@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
                 }
             }
             Vector3 difference = Input.mousePosition - transform.position;
-            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg - 90;
             transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ); 
         }
     }

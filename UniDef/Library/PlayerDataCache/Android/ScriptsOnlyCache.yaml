@@ -593,4 +593,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.05.apk
+  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.06.apk

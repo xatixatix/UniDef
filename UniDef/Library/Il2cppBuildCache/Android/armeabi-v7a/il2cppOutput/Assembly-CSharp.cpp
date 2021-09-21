@@ -4828,7 +4828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerScript_Update_m4B7EDA0BE2C7C0C1ED2
 		bool L_1 = L_0->get_isStarted_11();
 		if (!L_1)
 		{
-			goto IL_00dd;
+			goto IL_00e3;
 		}
 	}
 	{
@@ -4894,14 +4894,14 @@ IL_0094:
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_19;
 		L_19 = Vector3_op_Subtraction_m2725C96965D5C0B1F9715797E51762B13A5FED58_inline(L_16, L_18, /*hidden argument*/NULL);
 		V_0 = L_19;
-		// float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+		// float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg - 90;
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_20 = V_0;
 		float L_21 = L_20.get_y_3();
 		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_22 = V_0;
 		float L_23 = L_22.get_x_2();
 		float L_24;
 		L_24 = atan2f(L_21, L_23);
-		V_1 = ((float)il2cpp_codegen_multiply((float)L_24, (float)(57.2957802f)));
+		V_1 = ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_multiply((float)L_24, (float)(57.2957802f))), (float)(90.0f)));
 		// transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_25;
 		L_25 = Component_get_transform_mE8496EBC45BEB1BADB5F314960F1DF1C952FA11F(__this, /*hidden argument*/NULL);
@@ -4912,7 +4912,7 @@ IL_0094:
 		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_25, L_27, /*hidden argument*/NULL);
 	}
 
-IL_00dd:
+IL_00e3:
 	{
 		// }
 		return;
