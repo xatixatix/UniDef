@@ -46,7 +46,8 @@ public class SaveManager : MonoBehaviour
             coins = 0,
             laserU = 1,
             speedU = 1,
-            fireRateU = 1
+            fireRateU = 1,
+            level = 1
         };
 
         binaryformatter.Serialize(fileStream, newSaveData);
@@ -65,6 +66,7 @@ public class SaveManager : MonoBehaviour
         DataHolder.instance.laserU = saveData.laserU;
         DataHolder.instance.speedU = saveData.speedU;
         DataHolder.instance.fireRateU = saveData.fireRateU;
+        DataHolder.instance.level = saveData.level;
 
         fileStream.Close();
     }
@@ -80,7 +82,8 @@ public class SaveManager : MonoBehaviour
             coins = DataHolder.instance.coins,
             laserU = DataHolder.instance.laserU,
             speedU = DataHolder.instance.speedU,
-            fireRateU = DataHolder.instance.fireRateU
+            fireRateU = DataHolder.instance.fireRateU,
+            level = DataHolder.instance.level
         };
 
         binaryformatter.Serialize(fileStream, newData);
@@ -109,4 +112,5 @@ public class SaveData
 
     public int highScore;
     public int coins;
+    public int level;
 }

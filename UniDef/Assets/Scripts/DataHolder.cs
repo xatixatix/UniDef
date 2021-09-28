@@ -22,6 +22,7 @@ public class DataHolder : MonoBehaviour
     public int fireRateU;
     #endregion
 
+    public int level;
     public int coins;
     public int wallMaxHealth;
     public int enemyDmg;

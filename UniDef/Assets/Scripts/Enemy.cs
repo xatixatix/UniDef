@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
             {
                 GameplayManager.instance.score += 1;
                 GameplayManager.instance.scoreText.text = "Score: " + GameplayManager.instance.score;
+                GameplayManager.instance.checkIfEnd();
                 Destroy(this.gameObject);
             }
         }

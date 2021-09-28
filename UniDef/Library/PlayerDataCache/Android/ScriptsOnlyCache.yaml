@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CanvasManager
+    - ContainerScript
     - DataHolder
     - Enemy
     - GameplayManager
@@ -12,6 +13,7 @@ ScriptsOnlyBuild:
     - Wall
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
+    - Unity.Cloud.Collaborate.UserInterface.WindowCache
     Unity.Mobile.AndroidLogcat.Editor.dll:
     - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
@@ -91,6 +93,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4266}
     - Class: 114
       Script: {instanceID: 4388}
+    - Class: 114
+      Script: {instanceID: 27456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,7 +224,7 @@ ScriptsOnlyBuild:
     className: Wall
   - hash:
       serializedVersion: 2
-      Hash: b0577c40583301c0486303c786c9b733
+      Hash: 256a25979d374978860306931482b826
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameplayManager
@@ -358,7 +362,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: e519ee5b3b518d18da1458fdb19781d9
+      Hash: 3df31828814e0cc0893a4ebac57a1fe3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DataHolder
@@ -590,7 +594,13 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ContainerScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.06.apk
+  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.07.apk
