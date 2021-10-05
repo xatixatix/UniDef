@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject dmgTextPrefab;
+
     float health;
     public Slider healthBar;
     public int enemySpeed;
@@ -36,6 +38,10 @@ public class Enemy : MonoBehaviour
         {
             health -= DataHolder.instance.dmg;
             healthBar.value = health;
+
+            //spawn dmg text
+            GameObject dmgTextObj = Instantiate(dmgTextPrefab, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity, GameObject.FindGameObjectWithTag("GameCanvas").transform) as GameObject;
+
             if (health <= 0)
             {
                 GameplayManager.instance.score += 1;

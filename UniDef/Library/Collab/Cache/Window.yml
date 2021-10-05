@@ -14,40 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefabs/2drones.prefab
-    - Assets/Prefabs/2drones.prefab.meta
-    - Assets/Prefabs/3drones.prefab
-    - Assets/Prefabs/3drones.prefab.meta
-    - Assets/Prefabs/4drones.prefab
-    - Assets/Prefabs/4drones.prefab.meta
-    - Assets/Prefabs/5drones.prefab
-    - Assets/Prefabs/5drones.prefab.meta
-    - Assets/Scenes/Main.unity
-    - Assets/Scripts/ContainerScript.cs
-    - Assets/Scripts/ContainerScript.cs.meta
-    - Assets/Scripts/DataHolder.cs
-    - Assets/Scripts/Enemy.cs
-    - Assets/Scripts/GameplayManager.cs
-    - Assets/Scripts/SaveManager.cs
     - 
-    m_Values: 00000000000000000000000000000000
-  RevisionSummary: '- Added 2,3,4,5 drone setups to spawn more enemies at once
-
-    -
-    Worked on the spawning system, based on levels, it''s endless and dynamic (needs
-    adjustments)
-
-    - Level is added to the savefile (savefiles are not compatible
-    with each other, need to delete the last save in order for to work)
-
-    - New
-    script: ContainerScript
-
-    - Enemies are counted by their tag
-
-    - After
-    an enemy dies, it''s checked if we have any enemy on the map and evaluate if
-    it''s the end of the round or not'
+    m_Values: 01
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

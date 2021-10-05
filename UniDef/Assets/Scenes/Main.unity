@@ -3289,6 +3289,8 @@ MonoBehaviour:
   levelText: {fileID: 150274201}
   timeElapsedText: {fileID: 1388484601}
   isStarted: 0
+  enemiesToSpawn: 0
+  enemiesOnTheMap: 0
 --- !u!114 &1856483787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3307,7 +3309,7 @@ MonoBehaviour:
   laserU: 1
   speedU: 1
   fireRateU: 1
-  level: 0
+  level: 123
   coins: 0
   wallMaxHealth: 100
   enemyDmg: 5
