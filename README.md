@@ -2,6 +2,12 @@
 
 <p align="center">UniDef is an open-source android game that you can tailor to your own liking. Have fun :)</p>
 
+v0.08:
+--------
+
+- Enemy spawns a text that has an animation on it. The text animation triggers a function that destroys it after it's completed.
+- Damage upgrade has a new function for calculating damage
+
 v0.07:
 --------
 
