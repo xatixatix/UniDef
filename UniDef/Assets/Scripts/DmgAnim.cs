@@ -12,7 +12,7 @@ public class DmgAnim : MonoBehaviour
     }
     private void Update()
     {
-        this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 2);
+        this.transform.position = new Vector2(this.transform.position.x, this.transform.position.y + 0.2f);
     }
     public void AnimEnd()
     {

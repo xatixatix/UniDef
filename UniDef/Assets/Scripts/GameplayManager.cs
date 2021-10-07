@@ -29,6 +29,9 @@ public class GameplayManager : MonoBehaviour
     float spawnRate = 4;
     float nextSpawn;
 
+    public Text coinsEarnedText;
+    public GameObject endScreen;
+
     public int enemiesToSpawn;
     public int enemiesOnTheMap;
 
@@ -54,6 +57,8 @@ public class GameplayManager : MonoBehaviour
     }
     public void startGame()
     {
+        endScreen.SetActive(false);
+
         enemiesToSpawn = Convert.ToInt32(DataHolder.instance.level + 5 * 0.9);
         enemyHealth = Convert.ToInt32(20 + DataHolder.instance.level * 1.5);
         levelText.text = "Level: " + DataHolder.instance.level;
@@ -136,7 +141,16 @@ public class GameplayManager : MonoBehaviour
             coinsToAdd = 5;
         }
         DataHolder.instance.coins += coinsToAdd;
+        coinsEarnedText.text = "Coins collected: " + coinsToAdd;
+        endScreen.SetActive(true);
 
         SaveManager.instance.JustSave();
+
+        //destroying enemies after failed run
+        GameObject[] enemiesToKill = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < enemiesToKill.Length; i++)
+        {
+            Destroy(enemiesToKill[i].gameObject);
+        }
     }
 }

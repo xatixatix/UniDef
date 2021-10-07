@@ -2,6 +2,13 @@
 
 <p align="center">UniDef is an open-source android game that you can tailor to your own liking. Have fun :)</p>
 
+v0.09
+--------
+
+- Made an end of game screen, so there is no need to restart the game after every round
+- Destroying enemies after failed round
+- Made the dmg text look better and move slower
+
 v0.08:
 --------
 
