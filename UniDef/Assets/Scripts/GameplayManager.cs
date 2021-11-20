@@ -35,6 +35,8 @@ public class GameplayManager : MonoBehaviour
     public int enemiesToSpawn;
     public int enemiesOnTheMap;
 
+    public int enemiesKilled;
+
     void Update()
     {
         if (isStarted)
@@ -60,8 +62,11 @@ public class GameplayManager : MonoBehaviour
         endScreen.SetActive(false);
 
         enemiesToSpawn = Convert.ToInt32(DataHolder.instance.level + 5 * 0.9);
-        enemyHealth = Convert.ToInt32(20 + DataHolder.instance.level * 1.5);
+        enemyHealth = Convert.ToInt32(Math.Pow((3 * DataHolder.instance.level),1.32));
         levelText.text = "Level: " + DataHolder.instance.level;
+        enemiesKilled = 0;
+
+        Wall.instance.wallHealthText.text = Wall.instance.wallHealth + "/" + DataHolder.instance.wallMaxHealth;
 
         scoreText.text = "Score: " + score;
         timeElapsed = 0;
@@ -135,7 +140,7 @@ public class GameplayManager : MonoBehaviour
             DataHolder.instance.highScore = score;
         }
 
-        int coinsToAdd = Convert.ToInt32(DataHolder.instance.level * score * ((DataHolder.instance.laserU + DataHolder.instance.speedU +DataHolder.instance.fireRateU) / 3));
+        int coinsToAdd = Convert.ToInt32(DataHolder.instance.level * 2 + enemiesKilled * DataHolder.instance.level);
         if (coinsToAdd < 5 && score > 4)
         {
             coinsToAdd = 5;

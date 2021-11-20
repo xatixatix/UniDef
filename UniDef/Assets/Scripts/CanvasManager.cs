@@ -22,12 +22,13 @@ public class CanvasManager : MonoBehaviour
     public void toUpgrades()
     {
         everythingOff();
+        UpgradeManager.instance.RefreshUpgrades();
         UpgradeCanvas.GetComponent<Canvas>().enabled = true;
     }
     private void everythingOff()
     {
         MenuCanvas.GetComponent<Canvas>().enabled = false;
         GameCanvas.GetComponent<Canvas>().enabled = false;
-        UpgradeCanvas.GetComponent<Canvas>().enabled = true;
+        UpgradeCanvas.GetComponent<Canvas>().enabled = false;
     }
 }

@@ -62,8 +62,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -245,13 +243,13 @@ ScriptsOnlyBuild:
     className: Wall
   - hash:
       serializedVersion: 2
-      Hash: 0a420e6484b3a931bfa63c8db5c0e2d3
+      Hash: 67b72781de71f6309c69bf13acf4b4fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameplayManager
   - hash:
       serializedVersion: 2
-      Hash: 5e16140f9bf5feea714cbef410264e8b
+      Hash: e20e29f6609ed5b3b27b8e2f8c0070a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradeManager
@@ -624,4 +622,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.09.apk
+  playerPath: C:/Users/Attila/Desktop/UniDef/UniDefBuilds/0.10.apk

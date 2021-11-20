@@ -13,6 +13,8 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
+    public Text coinText;
+
     public Text laserUText;
     public Text speedUText;
     public Text fireRateUText;
@@ -30,6 +32,8 @@ public class UpgradeManager : MonoBehaviour
     {
         //z = x.^ 1.3;
         //y = z * 5 * 0.8;
+
+        coinText.text = "Coins: " + DataHolder.instance.coins;
 
         doubleBuff = Math.Pow(DataHolder.instance.laserU, 1.3);
         DataHolder.instance.dmg = Convert.ToInt32(doubleBuff * 5 * 0.8);

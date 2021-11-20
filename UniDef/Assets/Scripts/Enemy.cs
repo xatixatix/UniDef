@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             {
                 GameplayManager.instance.score += 1;
+                GameplayManager.instance.enemiesKilled += 1;
                 GameplayManager.instance.scoreText.text = "Score: " + GameplayManager.instance.score;
                 GameplayManager.instance.checkIfEnd();
                 Destroy(this.gameObject);

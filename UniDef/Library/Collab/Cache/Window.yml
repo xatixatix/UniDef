@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Prefabs/dmgText.prefab
-    - Assets/Scripts/DmgAnim.cs
+    - Assets/Scenes/Main.unity
+    - Assets/Scripts/CanvasManager.cs
+    - Assets/Scripts/UpgradeManager.cs
+    - Packages/manifest.json
+    - Packages/packages-lock.json
     - 
-    m_Values: 000000
+    m_Values: 000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
