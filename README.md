@@ -2,6 +2,11 @@
 
 <p align="center">UniDef is an open-source android game that you can tailor to your own liking. Have fun :)</p>
 
+v0.10
+--------
+
+- Now you can see how many coins you have (upgrades menu)
+
 v0.09
 --------
 
